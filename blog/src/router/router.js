@@ -1,6 +1,6 @@
 import {createRouter, createWebHashHistory} from "vue-router";
 
-export const router =  createRouter({
+export const router = createRouter({
     history: createWebHashHistory(),
     routes: [
         {
@@ -9,7 +9,13 @@ export const router =  createRouter({
         },
         {
             path: '/home',
-            component: () => import('/src/views/Home.vue'),
+            component: () => import('/src/views/homeChildren/Home.vue'),
+            children: [
+                {
+                    path: '/home/frontPage',
+                    component: () => import('/src/views/homeChildren/FrontPage.vue'),
+                }
+            ]
         }
     ]
 });

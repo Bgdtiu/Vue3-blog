@@ -6,7 +6,7 @@ import {ref, onMounted} from "vue";
 let menu = ref([
   {
     name: '首页',
-    path: '/home',
+    path: '/home/frontPage',
   },
   {
     name: '文章',
@@ -41,10 +41,14 @@ let btnSwitch = ref(false);
         <li
             v-for="obj in menu"
             class=" flex items-center"
-        ><a
-            class="w-auto h-12 mx-1 px-3 rounded-lg  bg-white flex  items-center"
-            href="{{obj.path}}"
-        >{{ obj.name }}</a></li>
+        >
+          <router-link
+              :to="obj.path"
+              class="w-auto h-12 mx-1 px-3 rounded-lg  bg-white flex  items-center"
+          >
+            {{ obj.name }}
+          </router-link>
+        </li>
       </ul>
     </div>
     <div class="w-1/4 h-full lg:invisible  ">
@@ -92,10 +96,14 @@ let btnSwitch = ref(false);
             <li
                 v-for="obj in menu"
                 class="my-4"
-            ><a
-                class="p-3 bg-white rounded-lg  "
-                href="{{obj.path}}"
-            >{{ obj.name }}</a></li>
+            >
+              <router-link
+                  :to="obj.path"
+                  class="p-3 bg-white rounded-lg  "
+              >
+                {{obj.name}}
+              </router-link>
+            </li>
           </ul>
         </div>
       </div>
