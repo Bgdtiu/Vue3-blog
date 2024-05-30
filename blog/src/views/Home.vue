@@ -1,11 +1,10 @@
 <script setup>
-
+import Header from "../components/home/Header.vue";
 </script>
 
 <template>
   <div>
-    <div class="w-full h-16 bg-blue-400">
-    </div>
+    <Header/>
     <div></div>
     <div></div>
   </div>
