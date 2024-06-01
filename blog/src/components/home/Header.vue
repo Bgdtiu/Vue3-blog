@@ -1,6 +1,6 @@
 <script setup>
 
-import {ref, onMounted} from "vue";
+import {ref} from "vue";
 
 //菜单信息
 let menu = ref([
@@ -9,15 +9,19 @@ let menu = ref([
     path: '/home/frontPage',
   },
   {
-    name: '文章',
+    name: '分类',
     path: '/home',
+  },
+  {
+    name: '标签',
+    path: '/tag',
   },
   {
     name: '图片',
     path: '/home',
   },
   {
-    name: '关于',
+    name: '归档',
     path: '/home',
   }
 ]);
@@ -29,34 +33,47 @@ let btnSwitch = ref(false);
 
 <template>
 
-  <div class="w-full h-16 mt-2.5 flex  fixed">
+  <div class="w-full h-20  flex bg-white fixed justify-center border-b-2 shadow-lg z-50">
 
-    <div class="w-1/4 h-full ">
-      <img src="/src/assets/image/aa.jpg" class="w-20 h-full ml-10 p-1 rounded-lg bg-blue-400"/>
+    <div class="w-4/12 h-full flex items-center justify-center">
+      <img alt="error" src="/src/assets/image/avatar.jpg" class="w-20 h-full  p-1 rounded-full "/>
+      <p
+          class="text-2xl ml-5"
+      >T_blog</p>
     </div>
-    <div class="invisible w-2/4 h-full lg:visible  ">
+    <div class="invisible w-4/12 h-full lg:visible  ">
       <ul
-          class="w-full h-full flex justify-center items-center bg-blue-400 rounded-lg "
+          class="w-full h-full flex justify-center items-center  rounded-lg "
       >
         <li
             v-for="obj in menu"
-            class=" flex items-center"
+            class=" flex items-center "
         >
           <router-link
               :to="obj.path"
-              class="w-auto h-12 mx-1 px-3 rounded-lg  bg-white flex  items-center"
+              class="w-auto h-12 mx-1 px-3 rounded-lg flex  items-center "
           >
             {{ obj.name }}
           </router-link>
         </li>
       </ul>
     </div>
-    <div class="w-1/4 h-full lg:invisible  ">
+    <div class="w-4/12 h-full lg:invisible  flex justify-center">
+      <div
+          class="w-full h-full  invisible lg:visible flex justify-center items-center"
+      >
+        <input
+            type="text"
+            placeholder="请输入想要查询的文章"
+            class="absolute w-44 h-10 shadow-f bg-zinc-200 rounded-full bg-no-repeat bg-auto text-center"
+        >
+      </div>
+
       <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          class="w-20 h-full float-right mr-1 p-1 bg-blue-400 rounded-lg fill-white"
+          class="w-20 h-full float-right  p-1  rounded-lg "
           v-if="btnSwitch === false"
           @click="btnSwitch = true"
       >
@@ -67,7 +84,7 @@ let btnSwitch = ref(false);
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          class="w-20 h-full float-right mr-1 p-1 bg-blue-400 rounded-lg   fill-white"
+          class="w-20 h-full float-right  p-1  rounded-lg   "
           v-else
           @click="btnSwitch = false"
       >
@@ -79,15 +96,9 @@ let btnSwitch = ref(false);
           class="absolute w-full h-96 left-0 right-0 top-24 "
           v-if="btnSwitch === true"
       >
-        <div
-            class="w-6/12 h-full  float-left"
-            @click="btnSwitch = false"
-        >
 
-
-        </div>
         <div
-            class="w-6/12 h-full bg-blue-400 float-right rounded-l-lg"
+            class="w-6/12 h-full  float-right rounded-l-lg"
         >
 
           <ul
@@ -99,9 +110,9 @@ let btnSwitch = ref(false);
             >
               <router-link
                   :to="obj.path"
-                  class="p-3 bg-white rounded-lg  "
+                  class="p-3 bg-white rounded-lg  shadow-lg"
               >
-                {{obj.name}}
+                {{ obj.name }}
               </router-link>
             </li>
           </ul>

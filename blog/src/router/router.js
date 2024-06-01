@@ -5,7 +5,7 @@ export const router = createRouter({
     routes: [
         {
             path: '/',
-            redirect: '/home',
+            redirect: '/home/frontPage',
         },
         {
             path: '/home',
