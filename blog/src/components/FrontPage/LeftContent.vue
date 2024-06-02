@@ -32,7 +32,30 @@ let articleArray = ref([
     legend: '已更新 159 节内容，共计 244600 字，演示截图：1058 张，持续爆肝...',
     dateTime: '2024/5/31 - 1:23:21',
     classify: 'Java'
-  }
+  },
+  {
+    img: 'https://api.miaomc.cn/image/get',
+    articleId: '1',
+    tag: [
+      {
+        name: 'Java',
+        backgroundColor: 'bg-yellow-500',
+      },
+      {
+        name: 'Json',
+        backgroundColor: 'bg-lime-500',
+      },
+      {
+        name: 'MybatisPlus',
+        backgroundColor: 'bg-blue-400',
+      }
+    ],
+    title: '从零手撸前后端分离博客(已更新37w+字)...',
+    legend: '已更新 159 节内容，共计 244600 字，演示截图：1058 张，持续爆肝...',
+    dateTime: '2024/5/31 - 1:23:21',
+    classify: 'Java'
+  },
+
 
 ]);
 
@@ -89,12 +112,12 @@ function pageIncrement() {
       ref="div"
   >
     <div
-        class="w-full  p-2  grid gap-5 lg:grid-cols-2"
+        class="w-full p-2  grid gap-5 lg:grid-cols-2"
 
     >
       <div
           v-for="obj in articleArray"
-          class=" h-[32rem] shadow-xl  border-amber-400 rounded-2xl
+          class="w-full h-[32rem] shadow-xl  border-amber-400 rounded-2xl
          ease-in-out hover:scale-[1.03] duration-300 hover:shadow-2xl"
       >
         <div
