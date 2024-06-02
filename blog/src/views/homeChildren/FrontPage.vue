@@ -11,6 +11,7 @@ import LeftContent from "../../components/FrontPage/LeftContent.vue";
     <LeftContent/>
     <RightAuthor/>
   </div>
+
 </template>
 
 <style scoped>
