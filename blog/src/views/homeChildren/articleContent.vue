@@ -30,7 +30,7 @@ let text = ref(`
 
 ## Install
 
-\`\`\`bash
+\`\`\` bash
 # use npm
 npm i @kangc/v-md-editor -S
 

@@ -12,7 +12,7 @@ onMounted(() => {
 
 let articleArray = ref([
   {
-    img: 'https://api.miaomc.cn/image/get',
+    img: 'https://i1.mcobj.com/uploads/20220514_627f643c54a76.png-1920x1080',
     articleId: '1',
     tag: [
       {
@@ -34,7 +34,7 @@ let articleArray = ref([
     classify: 'Java'
   },
   {
-    img: 'https://api.miaomc.cn/image/get',
+    img: 'https://i1.mcobj.com/uploads/20220514_627f51acc8b93.png-1920x1080',
     articleId: '1',
     tag: [
       {
@@ -56,7 +56,7 @@ let articleArray = ref([
     classify: 'Java'
   },
   {
-    img: 'https://api.miaomc.cn/image/get',
+    img: 'https://i1.mcobj.com/uploads/20220201_cb31b370430ad.jpg-1920x1080',
     articleId: '1',
     tag: [
       {
@@ -78,7 +78,7 @@ let articleArray = ref([
     classify: 'Java'
   },
   {
-    img: 'https://api.miaomc.cn/image/get',
+    img: 'https://i1.mcobj.com/uploads/20220514_627f649731a3a.png-1920x1080',
     articleId: '1',
     tag: [
       {
@@ -100,7 +100,7 @@ let articleArray = ref([
     classify: 'Java'
   },
   {
-    img: 'https://api.miaomc.cn/image/get',
+    img: 'https://i1.mcobj.com/uploads/20220514_627f57b596f3a.jpg-1920x1080',
     articleId: '1',
     tag: [
       {
@@ -194,7 +194,7 @@ function pageIncrement() {
           <router-link :to="'/home/articleContent/' + obj.articleId">
             <img
                 alt="error"
-                :src="obj.img"
+                v-lazy="obj.img"
                 class="w-full h-full transition-transform ease-in-out hover:scale-110 duration-300"
             >
           </router-link>
