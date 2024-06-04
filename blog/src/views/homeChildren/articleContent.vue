@@ -20,13 +20,7 @@ let newVar = [
 ];
 
 let text = ref(`
-<h1 align="center">Markdown Editor built on Vue</h1>
 
-<p align="center">
-  <a href="https://npmcharts.com/compare/@kangc/v-md-editor?minimal=true"><img src="https://img.shields.io/npm/dm/@kangc/v-md-editor.svg?sanitize=true" alt="Downloads"></a>
-  <a href="https://www.npmjs.com/package/@kangc/v-md-editor"><img src="https://img.shields.io/npm/v/@kangc/v-md-editor.svg?sanitize=true" alt="Version"></a>
-  <a href="https://www.npmjs.com/package/@kangc/v-md-editor"><img src="https://img.shields.io/npm/l/@kangc/v-md-editor.svg?sanitize=true" alt="License"></a>
-</p>
 
 ## Links
 
@@ -91,6 +85,7 @@ Vue.use(VueMarkdownEditor);
 `);
 const scrollElement = document.documentElement;
 const id = 'preview-only';
+const previewTheme = 'smart-blue';
 </script>
 
 <template>
@@ -104,10 +99,11 @@ const id = 'preview-only';
           class="w-full h-full p-5   mx-auto lg:w-10/12"
       >
         <div
-            class="w-14 mb-5 p-1 bg-blue-400 text-center rounded-md
-            hover:text-white hover:bg-indigo-800 hover:duration-300 ease-in-out transition active:bg-indigo-50"
+            class="w-full h-auto mb-5 flex justify-end"
         >
           <router-link
+              class="px-3 py-1 bg-blue-400 text-center rounded-md
+            hover:text-white hover:bg-indigo-800 hover:duration-300 ease-in-out transition active:bg-indigo-50"
               to="/home/frontPage">
             返回
           </router-link>
@@ -144,6 +140,7 @@ const id = 'preview-only';
             </svg>
 
             <p>6379</p>
+
           </div>
 
           <div class="w-auto h-5 flex justify-center items-center mr-5">
@@ -169,7 +166,11 @@ const id = 'preview-only';
                   d="M12.4142 5H21C21.5523 5 22 5.44772 22 6V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H10.4142L12.4142 5ZM8 19H20V11H8V19ZM6 19V10C6 9.44772 6.44772 9 7 9H20V7H11.5858L9.58579 5H4V19H6Z"></path>
             </svg>
 
-            <p>java</p>
+            <router-link
+                class="hover:text-indigo-800"
+                to="/home/classify/java">
+              java
+            </router-link>
           </div>
           <div class="w-auto h-5 flex justify-center items-center">
             <svg
@@ -193,17 +194,17 @@ const id = 'preview-only';
         >
           <div
               class="w-full h-full shadow-2xl p-5 rounded-md xl:mr-5
-              hover:shadow-black transition ease-in-out duration-300"
+              hover:shadow-black transition ease-in-out duration-300 lg:hover:scale-[1.01] "
           >
-            <MdPreview :editor-id="id" :model-value="text"/>
+            <MdPreview :editor-id="id" :model-value="text" :preview-theme="previewTheme"/>
           </div>
 
           <div
-              class="hidden w-auto h-auto  xl:block  "
+              class="hidden w-auto h-auto  xl:block"
           >
             <MdCatalog
                 class="sticky w-64 h-auto rounded-md top-24 px-5 py-10  shadow-2xl
-                hover:shadow-black transition ease-in-out duration-300"
+                hover:shadow-black transition ease-in-out duration-300 hover:scale-[1.01]"
                 :editor-id="id" :scroll-element="scrollElement"/>
           </div>
 

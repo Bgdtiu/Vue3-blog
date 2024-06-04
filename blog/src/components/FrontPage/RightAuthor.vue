@@ -5,8 +5,6 @@ import {frontPageStore} from "../../store/FrontPageStore.js";
 
 let leftContentHeight = frontPageStore().$state.leftContentHeight;
 
-console.log(leftContentHeight);
-
 let userData = ref({
   img: '/src/assets/image/avatar.jpg',
   nickName: 'Bgdtiu',
