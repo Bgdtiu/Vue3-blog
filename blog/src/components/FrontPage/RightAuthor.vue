@@ -41,11 +41,11 @@ let userData = ref({
 
 <template>
   <div
-      :class=" `hidden h-[${leftContentHeight}px]  w-4/12 2xl:block p-2 mx-5`"
+      :class=" `hidden h-[${leftContentHeight}px] w-auto   2xl:block p-2 mx-5`"
   >
 
     <div
-        class="w-full h-auto sticky top-24"
+        class="w-96 h-auto sticky top-24 2xl:w-96"
     >
       <div
           class="w-full h-96 rounded-lg shadow-xl border-amber-400 flex justify-evenly flex-col items-center

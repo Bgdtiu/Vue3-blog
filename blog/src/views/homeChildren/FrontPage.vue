@@ -6,7 +6,7 @@ import LeftContent from "../../components/FrontPage/LeftContent.vue";
 
 <template>
   <div
-      class=" md:w-9/12 h-full pt-24 mx-auto  flex"
+      class=" md:w-9/12 h-full pt-24 mx-auto  flex justify-center 2xl:w-full"
   >
     <LeftContent/>
     <RightAuthor/>

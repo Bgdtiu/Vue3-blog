@@ -13,7 +13,8 @@ import Bottom from "../../components/home/Bottom.vue";
 
   <router-view/>
 
-  <Bottom/>
+<!--  <Bottom/>-->
+
 
 </template>
 
