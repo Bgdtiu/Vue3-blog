@@ -14,6 +14,10 @@ export const router = createRouter({
                 {
                     path: '/home/frontPage',
                     component: () => import('/src/views/homeChildren/FrontPage.vue'),
+                },
+                {
+                    path: '/home/articleContent/:id',
+                    component: () => import('/src/views/homeChildren/articleContent.vue'),
                 }
             ]
         }

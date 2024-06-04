@@ -55,6 +55,74 @@ let articleArray = ref([
     dateTime: '2024/5/31 - 1:23:21',
     classify: 'Java'
   },
+  {
+    img: 'https://api.miaomc.cn/image/get',
+    articleId: '1',
+    tag: [
+      {
+        name: 'Java',
+        backgroundColor: 'bg-yellow-500',
+      },
+      {
+        name: 'Json',
+        backgroundColor: 'bg-lime-500',
+      },
+      {
+        name: 'MybatisPlus',
+        backgroundColor: 'bg-blue-400',
+      }
+    ],
+    title: '从零手撸前后端分离博客(已更新37w+字)...',
+    legend: '已更新 159 节内容，共计 244600 字，演示截图：1058 张，持续爆肝...',
+    dateTime: '2024/5/31 - 1:23:21',
+    classify: 'Java'
+  },
+  {
+    img: 'https://api.miaomc.cn/image/get',
+    articleId: '1',
+    tag: [
+      {
+        name: 'Java',
+        backgroundColor: 'bg-yellow-500',
+      },
+      {
+        name: 'Json',
+        backgroundColor: 'bg-lime-500',
+      },
+      {
+        name: 'MybatisPlus',
+        backgroundColor: 'bg-blue-400',
+      }
+    ],
+    title: '从零手撸前后端分离博客(已更新37w+字)...',
+    legend: '已更新 159 节内容，共计 244600 字，演示截图：1058 张，持续爆肝...',
+    dateTime: '2024/5/31 - 1:23:21',
+    classify: 'Java'
+  },
+  {
+    img: 'https://api.miaomc.cn/image/get',
+    articleId: '1',
+    tag: [
+      {
+        name: 'Java',
+        backgroundColor: 'bg-yellow-500',
+      },
+      {
+        name: 'Json',
+        backgroundColor: 'bg-lime-500',
+      },
+      {
+        name: 'MybatisPlus',
+        backgroundColor: 'bg-blue-400',
+      }
+    ],
+    title: '从零手撸前后端分离博客(已更新37w+字)...',
+    legend: '已更新 159 节内容，共计 244600 字，演示截图：1058 张，持续爆肝...',
+    dateTime: '2024/5/31 - 1:23:21',
+    classify: 'Java'
+  },
+
+
 
 
 ]);
@@ -112,18 +180,18 @@ function pageIncrement() {
       ref="div"
   >
     <div
-        class="w-full p-2  grid gap-5 lg:grid-cols-2"
+        class="w-full p-2  grid gap-5 lg:grid-cols-2 "
 
     >
       <div
           v-for="obj in articleArray"
-          class="w-full h-[32rem] shadow-xl  border-amber-400 rounded-2xl
+          class="w-full h-[32rem] shadow-xl  border-amber-400 rounded-2xl 2xl:w-[32rem]
          ease-in-out hover:scale-[1.03] duration-300 hover:shadow-2xl"
       >
         <div
             class="w-full h-2/5  overflow-hidden rounded-t-2xl"
         >
-          <router-link :to="'/articleContent/' + obj.articleId">
+          <router-link :to="'/home/articleContent/' + obj.articleId">
             <img
                 alt="error"
                 :src="obj.img"
@@ -143,7 +211,7 @@ function pageIncrement() {
                 :class="'mr-2 px-2 rounded-md tracking-wide duration-300 hover:brightness-75 '  + arr.backgroundColor"
                 v-for="arr in obj.tag"
             >
-              <router-link :to="'/tag/' + arr.name">
+              <router-link :to="'/home/tag/' + arr.name">
                 {{ arr.name }}
               </router-link>
             </span>
@@ -153,7 +221,7 @@ function pageIncrement() {
           <h2
               class="w-full text-3xl mb-5 font-bold tracking-wide  hover:text-indigo-800 duration-300"
           >
-            <router-link :to="'/articleContent/' +  obj.articleId">
+            <router-link :to="'/home/articleContent/' +  obj.articleId">
               {{ obj.title }}
             </router-link>
           </h2>
@@ -188,7 +256,7 @@ function pageIncrement() {
             <span
                 class="float-right hover:text-indigo-800 duration-300 "
             >
-              <router-link :to="'/classify/' + obj.classify">
+              <router-link :to="'/home/classify/' + obj.classify">
                 {{ obj.classify }}
               </router-link>
             </span>
