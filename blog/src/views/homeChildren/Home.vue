@@ -1,7 +1,5 @@
 <script setup>
 import Header from "../../components/home/Header.vue";
-import Bottom from "../../components/home/Bottom.vue";
-
 
 </script>
 
@@ -12,8 +10,6 @@ import Bottom from "../../components/home/Bottom.vue";
 
 
   <router-view/>
-
-<!--  <Bottom/>-->
 
 
 </template>
