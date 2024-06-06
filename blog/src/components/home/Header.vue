@@ -10,11 +10,11 @@ let menu = ref([
   },
   {
     name: '分类',
-    path: '/home',
+    path: '/home/classify',
   },
   {
     name: '标签',
-    path: '/tag',
+    path: '/home/tag',
   },
   {
     name: '图片',

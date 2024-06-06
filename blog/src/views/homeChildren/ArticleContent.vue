@@ -1,8 +1,8 @@
 <script setup>
 import {MdPreview, MdCatalog} from "md-editor-v3";
 import 'md-editor-v3/lib/preview.css'
-
 import {ref} from "vue";
+import {router} from "../../router/router.js";
 
 let newVar = [
   {
@@ -101,12 +101,12 @@ const previewTheme = 'smart-blue';
         <div
             class="w-full h-auto mb-5 flex justify-end"
         >
-          <router-link
+          <button
               class="px-3 py-1 bg-blue-400 text-center rounded-md
-            hover:text-white hover:bg-indigo-800 hover:duration-300 ease-in-out transition active:bg-indigo-50"
-              to="/home/frontPage">
+            hover:text-white hover:bg-indigo-800 hover:duration-300 ease-in-out transition active:bg-indigo-50 "
+              @click="()=>router.go(-1)">
             返回
-          </router-link>
+          </button>
         </div>
         <div
             class="mb-5"

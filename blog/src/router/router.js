@@ -17,7 +17,15 @@ export const router = createRouter({
                 },
                 {
                     path: '/home/articleContent/:id',
-                    component: () => import('/src/views/homeChildren/articleContent.vue'),
+                    component: () => import('/src/views/homeChildren/ArticleContent.vue'),
+                },
+                {
+                    path: '/home/classify',
+                    component: () => import('/src/views/homeChildren/Classify.vue'),
+                },
+                {
+                    path: '/home/tag',
+                    component: () => import('/src/views/homeChildren/Tag.vue'),
                 }
             ]
         }
