@@ -26,6 +26,10 @@ export const router = createRouter({
                 {
                     path: '/home/tag',
                     component: () => import('/src/views/homeChildren/Tag.vue'),
+                },
+                {
+                    path: '/home/photo',
+                    component: () => import('/src/views/homeChildren/Photo.vue'),
                 }
             ]
         }
