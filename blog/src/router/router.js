@@ -30,6 +30,11 @@ export const router = createRouter({
                 {
                     path: '/home/photo',
                     component: () => import('/src/views/homeChildren/Photo.vue'),
+                },
+                {
+                    path: '/home/pigeonhole',
+                    component:  ()=> import('/src/views/homeChildren/Pigeonhole.vue')
+
                 }
             ]
         }

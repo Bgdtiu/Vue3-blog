@@ -22,7 +22,7 @@ let menu = ref([
   },
   {
     name: '归档',
-    path: '/home',
+    path: '/home/pigeonhole',
   }
 ]);
 
