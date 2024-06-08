@@ -82,7 +82,7 @@ let objArr = ref([
           v-for="dateObj in objArr"
       >
         <div
-            class="w-52 h-auto flex items-center justify-center shadow-2xl shadow-black rounded-md mb-5"
+            class="w-52 h-auto flex items-center justify-center mb-5"
 
         >
           <svg

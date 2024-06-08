@@ -33,10 +33,14 @@ export const router = createRouter({
                 },
                 {
                     path: '/home/pigeonhole',
-                    component:  ()=> import('/src/views/homeChildren/Pigeonhole.vue')
+                    component: () => import('/src/views/homeChildren/Pigeonhole.vue'),
 
                 }
             ]
+        },
+        {
+            path: '/login',
+            component: () => import('/src/views/homeChildren/Login.vue'),
         }
     ]
 });
