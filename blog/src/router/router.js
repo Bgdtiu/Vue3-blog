@@ -41,6 +41,10 @@ export const router = createRouter({
         {
             path: '/login',
             component: () => import('/src/views/homeChildren/Login.vue'),
+        },
+        {
+            path: '/system',
+            component: () => import('/src/views/system/System.vue'),
         }
     ]
 });

@@ -1,5 +1,6 @@
 <script setup>
 import {ref} from "vue";
+import {router} from "../../router/router.js";
 
 let user = ref({
   user: '',
@@ -9,6 +10,8 @@ let user = ref({
 function submit() {
   console.log(user.value.user);
   console.log(user.value.password);
+
+  router.push('/system')
 }
 
 function clear() {
