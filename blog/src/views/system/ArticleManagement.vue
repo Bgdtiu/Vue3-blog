@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div>
-    仪表盘
-  </div>
+<div>
+  文章管理
+</div>
 </template>
 
 <style scoped>

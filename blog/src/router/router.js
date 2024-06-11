@@ -1,4 +1,5 @@
 import {createRouter, createWebHashHistory} from "vue-router";
+import {systemStore} from "../store/SystemStore.js";
 
 export const router = createRouter({
     history: createWebHashHistory(),
@@ -45,6 +46,60 @@ export const router = createRouter({
         {
             path: '/system',
             component: () => import('/src/views/system/System.vue'),
+            redirect: '/system/dashboard',
+            children: [
+                {
+                    path: '/system/dashboard',
+                    component: () => import('/src/views/system/Dashboard.vue'),
+
+                },
+                {
+                    path: '/system/articleManagement',
+                    component: () => import('/src/views/system/ArticleManagement.vue'),
+
+                },
+                {
+                    path: '/system/classificationManagement',
+                    component: () => import('/src/views/system/ClassificationManagement.vue'),
+
+                },
+                {
+                    path: '/system/tagManagement',
+                    component: () => import('/src/views/system/TagManagement.vue'),
+
+                },
+                {
+                    path: "/system/pictureManagement",
+                    component: () => import('/src/views/system/PictureManagement.vue'),
+                }
+            ]
         }
     ]
+});
+
+router.beforeEach((to, from, next) => {
+    let path = to.path;
+    let pathArr = to.path.split('/');
+
+    if (pathArr[1] === 'system') {
+        let status = -1;
+        systemStore().$state.horizontalMenu.forEach(h => {
+            if (h.path === path) {
+                status = 1;
+            }
+        });
+
+        if (status === -1) {
+            systemStore().$state.verticalMenu.forEach(v => {
+                if (v.path === path) {
+                    systemStore().$state.horizontalMenu.push({
+                        name: v.name,
+                        path: v.path
+                    })
+                }
+            });
+        }
+    }
+
+    next();
 });
