@@ -123,8 +123,6 @@ let articleArray = ref([
   },
 
 
-
-
 ]);
 
 //实现分页
@@ -176,16 +174,19 @@ function pageIncrement() {
 </script>
 
 <template>
+
+
   <div
       ref="div"
   >
     <div
-        class="w-full p-2  grid gap-5 lg:grid-cols-2 "
+        class="w-full grid gap-4 lg:grid-cols-2"
 
     >
+
       <div
           v-for="obj in articleArray"
-          class="w-full h-[32rem] shadow-xl  border-amber-400 rounded-2xl 2xl:w-[32rem]
+          class="w-[28em] h-[32rem] shadow-xl  border-amber-400 rounded-2xl
          ease-in-out hover:scale-[1.03] duration-300 hover:shadow-2xl"
       >
         <div

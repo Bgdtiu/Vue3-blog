@@ -4,7 +4,7 @@
 
 <template>
   <div
-      :class="`w-full h-20 bg-white shadow-2xl flex justify-center items-center`"
+      class="w-full h-20 mt-10 shadow-2xl shadow-black flex justify-center items-center"
   >
     <p>© 2024 Bgdtiu. All Rights Reserved.</p>
   </div>

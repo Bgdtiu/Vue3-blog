@@ -104,18 +104,16 @@ function pageIncrement() {
 </script>
 
 <template>
-  <div
-      class="pt-24"
-  >
+
     <div
-        class="w-full h-96  mx-auto lg:w-9/12"
+        class="w-screen h-screen"
     >
       <div
-          class="w-full h-full  mx mx-auto lg:w-10/12 p-5"
+          class="w-full h-full  mx mx-auto xl:w-[80em] p-5"
       >
         <div
-            class="w-full h-auto  p-5 mb-5  shadow-2xl  rounded-md
-            transition ease-in-out hover:scale-[1.1] duration-300 hover:shadow-black"
+            class="w-full h-auto  p-5 mb-5  shadow-md  rounded-md mx-auto
+            transition ease-in-out hover:scale-[1.03] duration-300 hover:shadow-xl"
         >
           <div
               class="w-full h-auto flex mb-5"
@@ -154,8 +152,8 @@ function pageIncrement() {
         >
           <div
               v-for="obj in objArr"
-              class="w-auto h-auto py-2 px-5 mb-6 rounded-md shadow-2xl mx-3
-              transition ease-in-out hover:scale-[1.1] duration-300 hover:shadow-black"
+              class="w-auto h-auto py-2 px-5 mb-6 rounded-md shadow-md mx-3
+              transition ease-in-out hover:scale-[1.05] duration-300 hover:shadow-2xl"
           >
             <div
                 class=" flex justify-center items-center "
@@ -243,7 +241,6 @@ function pageIncrement() {
 
       </div>
     </div>
-  </div>
 </template>
 
 <style scoped>

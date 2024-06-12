@@ -49,15 +49,15 @@ let objArr = ref([
         img: 'https://i1.mcobj.com/uploads/20220514_627f57b596f3a.jpg-1920x1080',
         title: '从零手撸前后端分离博客从零手撸前后端分离博客(已更新37w+字)...123123123从零手撸前后端分离博客(已更新37w+字)...123123123(已更新37w+字)...123123123',
         dateTime: '2024/5/31 - 1:23:21'
-      },{
+      }, {
         img: 'https://i1.mcobj.com/uploads/20220514_627f57b596f3a.jpg-1920x1080',
         title: '从零手撸前后端分离博客从零手撸前后端分离博客(已更新37w+字)...123123123从零手撸前后端分离博客(已更新37w+字)...123123123(已更新37w+字)...123123123',
         dateTime: '2024/5/31 - 1:23:21'
-      },{
+      }, {
         img: 'https://i1.mcobj.com/uploads/20220514_627f57b596f3a.jpg-1920x1080',
         title: '从零手撸前后端分离博客从零手撸前后端分离博客(已更新37w+字)...123123123从零手撸前后端分离博客(已更新37w+字)...123123123(已更新37w+字)...123123123',
         dateTime: '2024/5/31 - 1:23:21'
-      },{
+      }, {
         img: 'https://i1.mcobj.com/uploads/20220514_627f57b596f3a.jpg-1920x1080',
         title: '从零手撸前后端分离博客从零手撸前后端分离博客(已更新37w+字)...123123123从零手撸前后端分离博客(已更新37w+字)...123123123(已更新37w+字)...123123123',
         dateTime: '2024/5/31 - 1:23:21'
@@ -68,15 +68,13 @@ let objArr = ref([
 </script>
 
 <template>
-  <div
-      class="pt-24"
-  />
+
 
   <div
-      class="w-full h-96  mx-auto md:w-9/12"
+      class="w-screen h-auto mx-auto"
   >
     <div
-        class="w-full h-full p-1  md:p-5"
+        class="w-full xl:w-[80em] h-full mx-auto"
     >
       <div
           v-for="dateObj in objArr"
@@ -85,14 +83,26 @@ let objArr = ref([
             class="w-52 h-auto flex items-center justify-center mb-5"
 
         >
-          <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="w-10 h-10 fill-blue-300 mr-1"
-          >
+          <svg t="1718122651375" class="icon mr-5" viewBox="0 0 1024 1024" version="1.1"
+               xmlns="http://www.w3.org/2000/svg" p-id="5655" data-darkreader-inline-fill="" width="48" height="48">
             <path
-                d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM13 12H17V14H11V7H13V12Z"></path>
+                d="M915.968 206.421333h-352.128a29.184 29.184 0 0 1-19.072-6.784L480 144.341333A68.010667 68.010667 0 0 0 434.901333 128H203.605333A49.493333 49.493333 0 0 0 154.453333 177.066667v584.533333c0 26.496 21.973333 48.512 49.152 49.066667h712.362667a49.493333 49.493333 0 0 0 49.152-49.066667V255.488c0-26.496-21.973333-48.512-49.152-49.066667z"
+                fill="#1F92F6" opacity=".3" p-id="5656" data-darkreader-inline-fill=""
+                style="--darkreader-inline-fill: #0766b7;"></path>
+            <path
+                d="M804.181333 275.541333h-352.128a29.184 29.184 0 0 1-19.072-6.784L368.213333 213.461333a68.010667 68.010667 0 0 0-45.098666-16.341333H91.818667A49.493333 49.493333 0 0 0 42.666667 246.186667v584.533333c0 26.496 21.973333 48.512 49.152 49.066667h712.362666A49.493333 49.493333 0 0 0 853.333333 830.72V324.608c0-26.496-21.973333-48.512-49.152-49.066667z"
+                fill="#1F92F6" p-id="5657" data-darkreader-inline-fill=""
+                style="--darkreader-inline-fill: #0766b7;"></path>
+            <path
+                d="M483.84 542.72m21.333333 0l199.253334 0q21.333333 0 21.333333 21.333333l0 0q0 21.333333-21.333333 21.333334l-199.253334 0q-21.333333 0-21.333333-21.333334l0 0q0-21.333333 21.333333-21.333333Z"
+                fill="#FFFFFF" p-id="5658" data-darkreader-inline-fill=""
+                style="--darkreader-inline-fill: #181a1b;"></path>
+            <path
+                d="M483.84 680.96m21.333333 0l199.253334 0q21.333333 0 21.333333 21.333333l0 0q0 21.333333-21.333333 21.333334l-199.253334 0q-21.333333 0-21.333333-21.333334l0 0q0-21.333333 21.333333-21.333333Z"
+                fill="#FFFFFF" p-id="5659" data-darkreader-inline-fill=""
+                style="--darkreader-inline-fill: #181a1b;"></path>
+            <path d="M42.666667 404.48h810.666666v42.666667H42.666667z" fill="#FFFFFF" p-id="5660"
+                  data-darkreader-inline-fill="" style="--darkreader-inline-fill: #181a1b;"></path>
           </svg>
           <h2
               class="font-semibold text-2xl tracking-wide underline decoration-blue-300 underline-offset-4"
@@ -106,8 +116,8 @@ let objArr = ref([
         >
           <div
               v-for="arr in dateObj.arr"
-              class="w-auto h-auto py-2 px-5 mb-6 rounded-md shadow-2xl mx-3
-              transition ease-in-out hover:scale-[1.05] duration-300 hover:shadow-black"
+              class="w-auto h-auto py-2 px-5 mb-6 rounded-md shadow-md mx-3
+              transition ease-in-out hover:scale-[1.05] duration-300 hover:shadow-xl"
           >
             <div
                 class=" flex justify-center items-center "

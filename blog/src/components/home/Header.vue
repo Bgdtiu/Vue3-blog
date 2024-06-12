@@ -33,7 +33,7 @@ let btnSwitch = ref(false);
 
 <template>
 
-  <div class="w-full h-20  flex bg-white fixed justify-center border-b-2 shadow-lg z-10">
+  <div class="w-full h-20 flex bg-white fixed justify-center border-b-2 shadow-lg z-10 ">
 
     <div class="w-4/12 h-full flex items-center justify-center">
       <img alt="error" src="/src/assets/image/avatar.jpg" class="w-20 h-full  p-1 rounded-full "/>
@@ -119,8 +119,9 @@ let btnSwitch = ref(false);
         </div>
       </div>
     </div>
-
   </div>
+
+  <div class="pt-24"/>
 
 </template>
 

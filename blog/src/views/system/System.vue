@@ -1,6 +1,7 @@
 <script setup>
 
 import {systemStore} from "../../store/SystemStore.js";
+import Bottom from "../../components/home/Bottom.vue";
 
 function brush() {
   window.location.reload();
@@ -36,10 +37,10 @@ function closeBar(name) {
 
 <template>
   <div
-      class="flex"
+      class="w-screen h-screen flex"
   >
     <div
-        class="w-60 h-screen bg-slate-800"
+        class="w-60 h-full bg-slate-800"
     >
       <div
           class="w-full h-16 bg-slate-700 mb-1"
@@ -54,13 +55,13 @@ function closeBar(name) {
           @click="openBar(obj.name,obj.path)"
           :to="obj.path">
         <div
-            class="w-full  h-14 bg-slate-700 mb-1 hover:bg-blue-500
+            class="w-full  h-14 bg-slate-700  hover:bg-blue-500
           transition ease-in-out duration-300"
         >
 
 
           <p
-              class="w-full h-full flex ml-5  items-center"
+              class="w-full h-full flex ml-5 items-center"
           >
             <span
                 v-html="obj.svg"
@@ -123,7 +124,7 @@ function closeBar(name) {
             class="w-full h-12 border-b border-slate-100 p-2 flex"
         >
           <div
-              class="w-auto h-full mx-1 flex bg-blue-400 items-center rounded-sm"
+              class="w-auto h-full mx-1 flex bg-blue-400 items-center border rounded-md "
               v-for="obj in systemStore().$state.horizontalMenu"
           >
             <router-link :to="obj.path">
@@ -154,15 +155,15 @@ function closeBar(name) {
           </div>
         </div>
       </div>
+
       <div
-          class="w-full h-auto p-5"
+          class="overflow-y-auto w-full h-[87vh]  p-5"
       >
-        <div
-            class="w-full h-auto "
-        >
+
           <router-view/>
-        </div>
+
       </div>
+
     </div>
 
   </div>

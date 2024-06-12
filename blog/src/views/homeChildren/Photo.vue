@@ -28,7 +28,6 @@ let imgArr = ref([
   'https://image.cuteapi.com/images/ACG/PC/4b73e19cca7725777575a5e3473917ac.webp',
 
 
-
 ]);
 
 let isShowMask = ref(false);
@@ -83,15 +82,15 @@ function pageIncrement() {
 
 <template>
   <div
-      class="pt-24 w-11/12 h-96 mx-auto sm:w-9/12"
+      class="w-screen h-auto xl:h-screen"
   >
     <div
-        class="w-full h-auto grid gap-9  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        class="w-full h-auto px-5 mx-auto   grid gap-5 xl:w-[80em]   md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 "
     >
       <img
           v-for="url in imgArr "
-          class="p-1 shadow-2xl cursor-pointer rounded-md
-          hover:shadow-black transition ease-in-out duration-300 hover:scale-105 "
+          class="p-1 shadow-md cursor-pointer rounded-md
+          hover:shadow-xl transition ease-in-out duration-300 hover:scale-105 "
           v-lazy="url"
           @click="isShowMask = true"
       >

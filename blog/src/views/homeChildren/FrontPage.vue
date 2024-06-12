@@ -5,12 +5,15 @@ import LeftContent from "../../components/FrontPage/LeftContent.vue";
 </script>
 
 <template>
+
+
   <div
-      class=" md:w-9/12 h-full pt-24 mx-auto  flex justify-center 2xl:w-full"
+      class="w-screen h-auto flex justify-center"
   >
     <LeftContent/>
     <RightAuthor/>
   </div>
+
 
 </template>
 
