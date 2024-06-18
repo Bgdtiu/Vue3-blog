@@ -186,7 +186,7 @@ function pageIncrement() {
 
       <div
           v-for="obj in articleArray"
-          class="w-[28em] h-[32rem] shadow-xl  border-amber-400 rounded-2xl
+          class="w-[28em] h-[32rem] shadow-xl  border-amber-400 rounded-2xl bg-white
          ease-in-out hover:scale-[1.03] duration-300 hover:shadow-2xl"
       >
         <div

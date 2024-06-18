@@ -112,7 +112,7 @@ function pageIncrement() {
           class="w-full h-auto  mx mx-auto xl:w-[80em] p-5"
       >
         <div
-            class="w-full h-auto  p-5 mb-5  shadow-md  rounded-md mx-auto
+            class="w-full h-auto  p-5 mb-5  shadow-md  rounded-md mx-auto bg-white
             transition ease-in-out hover:scale-[1.03] duration-300 hover:shadow-xl"
         >
           <div
@@ -148,11 +148,11 @@ function pageIncrement() {
         </div>
 
         <div
-            class="w-full h-auto p-5 flex flex-wrap"
+            class="w-full h-auto p-5 flex flex-wrap "
         >
           <div
               v-for="obj in objArr"
-              class="w-auto h-auto py-2 px-5 mb-6 rounded-md shadow-md mx-3
+              class="w-auto h-auto py-2 px-5 mb-6 rounded-md shadow-md mx-3 bg-white
               transition ease-in-out hover:scale-[1.05] duration-300 hover:shadow-2xl"
           >
             <div

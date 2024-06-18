@@ -141,7 +141,8 @@ const previewTheme = 'smart-blue';
 
         </div>
 
-        <div class="w-auto h-5 flex justify-center items-center mr-5">
+        <div
+            class="w-auto h-5 flex justify-center items-center mr-5">
           <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24" fill="currentColor"
@@ -192,18 +193,18 @@ const previewTheme = 'smart-blue';
           class="w-full h-full p-3  mx-auto xl:w-[80em] flex"
       >
         <div
-            class="w-full h-full shadow-2xl p-5 rounded-md xl:mr-5
-              hover:shadow-black transition ease-in-out duration-300 lg:hover:scale-[1.01] "
+            class="w-full h-full shadow-md p-5 rounded-md xl:mr-5 bg-white
+              hover:shadow-xl transition ease-in-out duration-300 lg:hover:scale-[1.01] "
         >
           <MdPreview :editor-id="id" :model-value="text" :preview-theme="previewTheme"/>
         </div>
 
         <div
-            class="hidden w-auto h-auto  xl:block"
+            class="hidden w-auto h-auto  xl:block "
         >
           <MdCatalog
-              class="sticky w-64 h-auto rounded-md top-24 px-5 py-10  shadow-2xl
-                hover:shadow-black transition ease-in-out duration-300 hover:scale-[1.01]"
+              class="sticky w-64 h-auto rounded-md top-24 px-5 py-10  shadow-md bg-white
+                hover:shadow-xl transition ease-in-out duration-300 hover:scale-[1.01]"
               :editor-id="id" :scroll-element="scrollElement"/>
         </div>
 

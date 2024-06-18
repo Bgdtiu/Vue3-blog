@@ -1,5 +1,5 @@
 <script setup>
-import {onUpdated, ref} from "vue";
+import {ref} from "vue";
 import {router} from "../../router/router.js";
 import {MdEditor} from "md-editor-v3";
 import 'md-editor-v3/lib/style.css'
@@ -102,14 +102,20 @@ let layer2 = ref(0);
 function modifyUploadedArticle() {
   let id = modifyCreate.value.id;
 
-  for (let i = 0; i < arr.value.length; i++) {
-    if (arr.value[i].id === id) {
-      arr.value[i] = modifyCreate.value;
-      console.log('修改成功')
-      layer2.value = 0;
-      return;
+
+  if (id === '') {
+    console.log("上传成功");
+  } else {
+    for (let i = 0; i < arr.value.length; i++) {
+      if (arr.value[i].id === id) {
+        arr.value[i] = modifyCreate.value;
+        console.log('修改成功');
+        break
+      }
     }
   }
+
+  layer2.value = 0;
 
 }
 
@@ -136,8 +142,20 @@ function deleteArticle(id) {
 }
 
 //添加文章
-function addArticle(id) {
+function addArticle() {
+  layer2.value = 1;
 
+  modifyCreate.value = {
+    id: '',
+    title: '',
+    content: '',
+    articleCover: '',
+    summary: '',
+    releaseTime: '',
+    isDisplay: 1,
+    classify: '',
+    label: []
+  };
 }
 
 const previewTheme = 'smart-blue';
@@ -226,7 +244,7 @@ function addClassify(classify, index) {
       class="w-full h-full "
   >
     <div
-        class="w-full h-16 px-5 py-2 border-2 rounded-md shadow-md flex items-center mb-5 bg-white"
+        class="w-full h-16 px-5 py-2  rounded-md shadow-md flex items-center mb-5 bg-white"
     >
       <div
           class="h-full flex items-center  mr-10"
@@ -261,16 +279,17 @@ function addClassify(classify, index) {
 
 
     <div
-        class="w-full h-auto border p-1 shadow-md rounded-md bg-white"
+        class="w-full h-auto border p-1 shadow-md rounded-md bg-white px-5 py-3"
     >
       <div
-          class="w-auto h-auto my-2 ml-5"
+          class="w-auto h-auto mb-5"
       >
         <div
             class="w-full h-auto "
         >
           <button
               class="bg-blue-400 px-3 py-1 rounded-md text-white flex items-center"
+              @click="addArticle"
           >
           <span
               class="mr-2"
@@ -290,7 +309,9 @@ function addClassify(classify, index) {
       </div>
 
       <table class="w-full">
-        <thead>
+        <thead
+            class="h-14"
+        >
         <tr>
           <th class="border w-1/12">
             编号
@@ -467,7 +488,7 @@ function addClassify(classify, index) {
         <h2
             class=" text-xl font-bold text-zinc-500"
         >
-          修改文章
+          {{ modifyCreate.id === '' ? '创建文章' : '修改文章'}}
         </h2>
         <div
             class="w-auto h-auto"

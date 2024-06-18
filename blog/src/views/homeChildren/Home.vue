@@ -7,9 +7,14 @@ import Bottom from "../../components/home/Bottom.vue";
 <template>
 
 
-  <Header/>
 
-  <router-view/>
+
+  <div
+      class="w-full h-auto bg-gray-100"
+  >
+    <Header/>
+    <RouterView/>
+  </div>
 
 </template>
 

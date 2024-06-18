@@ -116,7 +116,7 @@ let objArr = ref([
         >
           <div
               v-for="arr in dateObj.arr"
-              class="w-auto h-auto py-2 px-5 mb-6 rounded-md shadow-md mx-3
+              class="w-auto h-auto py-2 px-5 mb-6 rounded-md shadow-md mx-3 bg-white
               transition ease-in-out hover:scale-[1.05] duration-300 hover:shadow-xl"
           >
             <div
