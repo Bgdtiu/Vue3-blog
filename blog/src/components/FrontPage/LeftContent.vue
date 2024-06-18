@@ -180,7 +180,7 @@ function pageIncrement() {
       ref="div"
   >
     <div
-        class="w-full grid gap-4 lg:grid-cols-2"
+        class="w-full  grid gap-4 lg:grid-cols-2"
 
     >
 

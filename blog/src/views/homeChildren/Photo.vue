@@ -82,10 +82,10 @@ function pageIncrement() {
 
 <template>
   <div
-      class="w-screen h-auto xl:h-screen"
+      class="w-screen h-auto"
   >
     <div
-        class="w-full h-auto px-5 mx-auto   grid gap-5 xl:w-[80em]   md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 "
+        class="w-full h-auto px-5 mx-auto   grid gap-5 xl:w-[80em] md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 "
     >
       <img
           v-for="url in imgArr "

@@ -106,10 +106,10 @@ function pageIncrement() {
 <template>
 
     <div
-        class="w-screen h-screen"
+        class="w-screen h-auto"
     >
       <div
-          class="w-full h-full  mx mx-auto xl:w-[80em] p-5"
+          class="w-full h-auto  mx mx-auto xl:w-[80em] p-5"
       >
         <div
             class="w-full h-auto  p-5 mb-5  shadow-md  rounded-md mx-auto
@@ -133,7 +133,7 @@ function pageIncrement() {
               class="w-auto h-auto flex flex-wrap "
           >
             <p
-                class="px-5 py-1 mx-3 my-1  bg-blue-400 rounded-md cursor-pointer
+                class="px-5 py-1 mx-3 my-1 text-white  bg-blue-400 rounded-md cursor-pointer
                 transition ease-in-out hover:scale-[1.1] duration-300 active:bg-white"
                 v-for="obj in arr"
             >

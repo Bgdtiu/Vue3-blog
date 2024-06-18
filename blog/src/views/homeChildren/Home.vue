@@ -11,8 +11,6 @@ import Bottom from "../../components/home/Bottom.vue";
 
   <router-view/>
 
-  <Bottom/>
-
 </template>
 
 <style scoped>

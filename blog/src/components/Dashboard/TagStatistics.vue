@@ -45,7 +45,7 @@ onMounted(() => {
 
 <template>
   <div
-      class="w-full h-96 shadow-md rounded-md p-5 mr-5 border
+      class="w-full h-96 shadow-md rounded-md p-5 mr-5 border bg-white
           hover:shadow-xl transition ease-in-out duration-300"
   >
     <h2

@@ -50,17 +50,17 @@ const option = ref({
     {
       name: 'CPU使用率(%)',
       type: 'line',
-      data: [80, 40, 101, 134, 90, 230, 210]
+      data: [1, 10, 5, 100, 1.1, 2, 4.23]
     },
     {
       name: '内存使用率(%)',
       type: 'line',
-      data: [120, 120, 201, 234, 290, 430, 410]
+      data: [40, 90, 50, 54, 43, 61, 20]
     },
     {
       name: '存储使用率(%)',
       type: 'line',
-      data: [120, 120, 401, 454, 590, 530, 510]
+      data: [10, 20, 60, 40, 15, 99, 61]
     }
   ]
 });
@@ -73,7 +73,7 @@ onMounted(() => {
 
 <template>
   <div
-      class="w-full h-96 shadow-md rounded-md p-5 mr-5 border
+      class="w-full h-96 shadow-md rounded-md p-5 mr-5 border bg-white
           hover:shadow-xl transition ease-in-out duration-300"
   >
     <h2

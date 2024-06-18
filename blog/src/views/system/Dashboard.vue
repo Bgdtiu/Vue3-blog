@@ -18,7 +18,7 @@ import SystemMessage from "../../components/Dashboard/SystemMessage.vue";
     >
       <div
           v-for="obj in dashboardStore().$state.dataDisplayArr"
-          class="w-72 h-full  rounded-md p-5 flex shadow-md items-center border
+          class="w-72 h-full  rounded-md p-5 flex shadow-md items-center border bg-white
           hover:shadow-xl transition ease-in-out duration-300 hover:scale-105"
       >
         <div
